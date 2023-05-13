@@ -92,6 +92,10 @@ def is_user_logged_in(phone_number):
 
     return False
 
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 @app.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
