@@ -116,7 +116,7 @@ def prediction():
     if request.method == 'GET':
         # Handle GET request logic
         def index():
-    return render_template('index.html')
+            return render_template('index.html')
     elif request.method == 'POST':
         # Handle POST request logic
         data = request.get_json()
