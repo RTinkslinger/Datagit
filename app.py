@@ -41,6 +41,9 @@ verified_number = "+919820820663"
 # Twilio client initialization
 client = Client(account_sid, auth_token)
 
+# Set the Twilio phone number
+twilio_phone_number = "+919820820663"
+
 # Function to generate OTP
 def generate_otp():
     return random.randint(1000, 9999)
