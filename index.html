@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cricket Prediction Game</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cricket Prediction Game</h1>
+        <form id="predictionForm">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" required>
+
+            <label for="otp">OTP:</label>
+            <input type="text" id="otp" name="otp" required>
+
+            <label for="prediction">Prediction:</label>
+            <input type="number" id="prediction" name="prediction" min="0" max="999" required>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
