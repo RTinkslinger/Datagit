@@ -111,16 +111,22 @@ def login():
         else:
             return jsonify({'error': 'Invalid OTP. Login failed.'}), 400
 
-@app.route('/prediction', methods=['POST'])
+@app.route('/prediction', methods=['GET', 'POST'])
 def prediction():
-    data = request.get_json()
-    phone_number = data.get('phoneNumber')
-    prediction = data.get('prediction')
+    if request.method == 'GET':
+        # Handle GET request logic
+        return jsonify({'message': 'This is a GET request'})
+    elif request.method == 'POST':
+        # Handle POST request logic
+        data = request.get_json()
+        phone_number = data.get('phoneNumber')
+        prediction = data.get('prediction')
 
-    if is_user_logged_in(phone_number):
-        return register_prediction(phone_number, prediction)
-    else:
-        return jsonify({'error': 'Please log in first.'}), 401
+        if is_user_logged_in(phone_number):
+            return register_prediction(phone_number, prediction)
+        else:
+            return jsonify({'error': 'Please log in first.'}), 401
+
 
 # Close the database connection
 @app.teardown_appcontext
