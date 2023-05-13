@@ -24,7 +24,8 @@ cursor.execute('''
 ''')
 
 # CricAPI credentials
-cricapi_key = ede6ae5d-44c2-467c-b283-d95fe3612b81
+cricapi_key = "ede6ae5d-44c2-467c-b283-d95fe3612b81"
+
 
 # Download the helper library from https://www.twilio.com/docs/python/install
 import os
